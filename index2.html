@@ -1,0 +1,103 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>D3 Test</title>
+        <script type="text/javascript" src="d3/d3.v3.js"></script>
+        <style>
+svg .pumpkin {
+    fill: yellow;
+    stroke: orange;
+    stroke-width: 5;
+ }
+
+
+div.bar {
+    display: inline-block;
+    width: 20px;
+    height: 75px;   /* We'll override this later */
+    background-color: teal;
+    margin-right:2px;
+}
+</style>
+    </head>
+    <body>
+    </body>
+
+        <script type="text/javascript">
+var w = 500;
+var h = 500;
+var max = 300;
+var padding = 3;
+var colours = ["yellow", "red", "green", "blue", "orange"];
+
+
+var svg = d3.select("body")
+            .append("svg")
+            .attr("width", w)
+            .attr("height", h);
+
+           // var dataset = [ 5, 10, 15, 20, 25 ];
+     var dataset = [
+     [ 1, 2, 1, 3, 4, 5, 1],
+     [ 2, 3, 6, 4, 3, 6, 2],
+     [ 3, 4, 5, 5, 2, 4, 3],
+     [ 4, 5, 4, 6, 1, 3, 4],
+     [ 5, 6, 3, 1, 5, 2, 5],
+     [ 6, 1, 2, 2, 6, 1, 6]
+     ];
+//     for (var i=0 ; i < 15 ; i ++) {
+//         dataset.push([ Math.random() * max+10, Math.random() * max+10] );
+//     }
+
+/*var bars = svg.selectAll("rect")
+    .data(dataset)
+    .enter()
+    .append("rect")
+    .attr("x", function(d,i) {return i * ( w / dataset.length ) ;} )
+    .attr("y", function(d) {return d/max*(h-50);} )
+    .attr("height",     function(d)     {return h - d/max*(h-50);} )
+    .attr("width",      function(d,i)   {return w / dataset.length - padding ; })
+    .attr("fill",       function(d,i)   { return "rgb(0, 0, " + ( Math.round((d/max) * 255) ) + ")";});*/
+
+var bars = svg.selectAll("rect")
+    .data(dataset)
+    .enter()
+    .append("circle")
+    .attr("cx",function(d,i) { return d[0]; })
+    .attr("cy",function(d,i) { return d[1];})
+    .attr("r", function(d,i) { return 5;})
+    .attr("fill", function(d,i){ return colours[i%4]; });
+
+
+
+var labels = svg.selectAll("text")
+    .data(dataset)
+    .enter()
+    .append("text")
+    .attr("x", function(d,i) {
+                return d[0];
+                } )
+    .attr("y", function(d) {return d[1]-7 ;} )
+    .attr("text-anchor", "middle")
+    .text(function(d){ return Math.round(d[0])+";"+Math.round(d[1]);});
+    
+
+
+
+var circles =  svg.selectAll("circle")
+        .data(dataset)
+        .enter()
+        .append("circle")
+        .attr("cx",function(d,i) { return d*w/max; })
+        .attr("cy",function(d,i) { return 5+d*15%50;})
+        .attr("r", function(d,i) { return 3*i%15;})
+        .attr("fill", function(d,i){ return colours[i%4]; });
+
+
+        </script>
+</html> 
+
+

@@ -1,0 +1,76 @@
+{ name: "Roedean Academy: Gr 08 PM Maths ",rankings: [ 1   ,   1   ,   1   ,   1   ,   1   ,   1   ,   1   ], score:   8898.0682148217 }
+{ name: "Roedean Academy: Gr 09 PM Maths ",rankings: [ 3   ,   2   ,   3   ,   3   ,   2   ,   2   ,   2   ], score:   3094.4523763458 }
+{ name: "Olico: Gr 10 Maths  ",rankings: [ 6   ,   4   ,   4   ,   4   ,   5   ,   3   ,   3   ], score:   2291.3832667333 }
+{ name: "Jeppe Girls: Gr 10U Maths SC    ",rankings: [ 27  ,   3   ,   2   ,   2   ,   3   ,   4   ,   4   ], score:   2116.9321320346 }
+{ name: "Roedean Academy: Gr 10 RB Maths ",rankings: [ 5   ,   8   ,   7   ,   5   ,   4   ,   5   ,   5   ], score:   1949.9810663021 }
+{ name: "Roedean Academy: Gr 11 RK Maths ",rankings: [ 9   ,   9   ,   5   ,   7   ,   7   ,   6   ,   6   ], score:   1326.7683928572 }
+{ name: "Wynberg Girls' High School: GR10PS  ",rankings: [ 2   ,   6   ,   6   ,   6   ,   6   ,   7   ,   7   ], score:   1305.8011948052 }
+{ name: "Olico: Gr 09 Maths  ",rankings: [ 13  ,   11  ,   10  ,   10  ,   11  ,   8   ,   8   ], score:   1252.4293904196 }
+{ name: "Herzlia: 103LJ  ",rankings: [ 10  ,   5   ,   8   ,   8   ,   8   ,   9   ,   9   ], score:   1149.9959461652 }
+{ name: "Herzlia: 105NM  ",rankings: [ 23  ,   7   ,   9   ,   9   ,   10  ,   10  ,   10  ], score:   1095.4823921761 }
+{ name: "Roedean School: Gr 11 Sci LK Class 1104 ",rankings: [ 42  ,   25  ,   27  ,   20  ,   9   ,   11  ,   11  ], score:   940.5046146254  }
+{ name: "Herzlia: 106NM  ",rankings: [ 18  ,   10  ,   12  ,   12  ,   15  ,   12  ,   12  ], score:   825.5361652812  }
+{ name: "Roedean Academy: Gr 11 AB Science   ",rankings: [ 15  ,   13  ,   11  ,   11  ,   12  ,   13  ,   13  ], score:   794.1385638368  }
+{ name: "Wynberg Girls' High School: GR10SP  ",rankings: [ 7   ,   16  ,   16  ,   14  ,   13  ,   14  ,   14  ], score:   693.9295749705  }
+{ name: "Creston College: Grade 9 PE ",rankings: [ 11  ,   14  ,   14  ,   15  ,   14  ,   15  ,   15  ], score:   675.1063815917  }
+{ name: "Jeppe Girls: Gr 10E Maths LT    ",rankings: [ 14  ,   19  ,   19  ,   16  ,   19  ,   16  ,   16  ], score:   475.5683333333  }
+{ name: "Wynberg Girls' High School: GR10EV  ",rankings: [ 4   ,   12  ,   13  ,   13  ,   16  ,   17  ,   17  ], score:   452.7333855799  }
+{ name: "Roedean School: Gr 11 Sci LK Class 1101 ",rankings: [ 45  ,   53  ,   54  ,   48  ,   17  ,   18  ,   18  ], score:   353.6375    }
+{ name: "HeronBridge: Gr 09 SE Maths ",rankings: [ 8   ,   15  ,   15  ,   17  ,   18  ,   19  ,   19  ], score:   352.5802983909  }
+{ name: "Roedean Academy: Gr 10 TN Science   ",rankings: [ 45  ,   32  ,   20  ,   22  ,   23  ,   20  ,   20  ], score:   298.1886219566  }
+{ name: "Wynberg Girls' High School: GR11EV  ",rankings: [ 20  ,   17  ,   17  ,   18  ,   20  ,   21  ,   21  ], score:   286.0357142857  }
+{ name: "Wynberg Girls' High School: GR10JN  ",rankings: [ 16  ,   18  ,   18  ,   19  ,   21  ,   22  ,   22  ], score:   271.404121965   }
+{ name: "Roedean School: Gr 11 Sci AB Class 1102 ",rankings: [ 45  ,   53  ,   54  ,   58  ,   22  ,   23  ,   23  ], score:   225.7961538462  }
+{ name: "Reddam House Atlantic Sea Board: Graham10   ",rankings: [ 26  ,   20  ,   21  ,   21  ,   24  ,   24  ,   24  ], score:   218.6571995909  }
+{ name: "Wynberg Girls' High School: GR10CU  ",rankings: [ 12  ,   21  ,   22  ,   23  ,   25  ,   25  ,   25  ], score:   199.6101576994  }
+{ name: "Wynberg Girls' High School: GR11JN  ",rankings: [ 17  ,   22  ,   23  ,   24  ,   26  ,   26  ,   26  ], score:   181.4782608696  }
+{ name: "Roedean Academy: Gr 12 SM Science   ",rankings: [ 45  ,   28  ,   29  ,   25  ,   27  ,   27  ,   27  ], score:   169.0107737305  }
+{ name: "Roedean School: Gr 10 Sci TN Class 1003 ",rankings: [ 43  ,   41  ,   24  ,   26  ,   28  ,   28  ,   28  ], score:   161.0483351817  }
+{ name: "Wynberg Girls' High School: GR10DM  ",rankings: [ 19  ,   23  ,   25  ,   27  ,   29  ,   29  ,   29  ], score:   137.6335227273  }
+{ name: "Wynberg Girls' High School: GR11PS  ",rankings: [ 24  ,   24  ,   26  ,   28  ,   30  ,   30  ,   30  ], score:   134.0795454545  }
+{ name: "Creston College: Grade 8 PE ",rankings: [ 40  ,   40  ,   44  ,   41  ,   37  ,   31  ,   31  ], score:   128.7276676328  }
+{ name: "Wynberg Girls' High School: GR11PM  ",rankings: [ 29  ,   27  ,   28  ,   29  ,   31  ,   32  ,   32  ], score:   117.5625    }
+{ name: "Wynberg Girls' High School: GR10PM  ",rankings: [ 28  ,   33  ,   35  ,   35  ,   38  ,   33  ,   33  ], score:   109.9122077922  }
+{ name: "Wynberg Girls' High School: GR11DM  ",rankings: [ 21  ,   26  ,   30  ,   30  ,   32  ,   34  ,   34  ], score:   100.9782608696  }
+{ name: "HeronBridge: Gr 08 SE Maths ",rankings: [ 45  ,   44  ,   46  ,   49  ,   43  ,   35  ,   35  ], score:   93.2698281013   }
+{ name: "Wynberg Girls' High School: GR11FB  ",rankings: [ 22  ,   29  ,   31  ,   31  ,   33  ,   36  ,   36  ], score:   91.5357142857   }
+{ name: "Wynberg Girls' High School: GR10FB  ",rankings: [ 25  ,   30  ,   32  ,   32  ,   34  ,   37  ,   37  ], score:   84.3461538462   }
+{ name: "HeronBridge: Gr 10 SE Maths ",rankings: [ 35  ,   43  ,   33  ,   33  ,   35  ,   38  ,   38  ], score:   76.4757378985   }
+{ name: "Reddam House Atlantic Sea Board: Graham12   ",rankings: [ 44  ,   31  ,   34  ,   34  ,   36  ,   39  ,   39  ], score:   68.993877551    }
+{ name: "Roedean School: Gr 10 Sci TN Class 1004 ",rankings: [ 45  ,   52  ,   36  ,   36  ,   39  ,   40  ,   40  ], score:   53.1033320997   }
+{ name: "Creston College: Grade 11 PE    ",rankings: [ 45  ,   36  ,   40  ,   37  ,   40  ,   41  ,   41  ], score:   52  }
+{ name: "CBC St John's Parklands: Gr 10 BZ   ",rankings: [ 39  ,   47  ,   37  ,   38  ,   41  ,   42  ,   42  ], score:   47.327242878    }
+{ name: "Roedean School: Gr 10 Sci AB Class 1002 ",rankings: [ 34  ,   37  ,   38  ,   39  ,   42  ,   43  ,   43  ], score:   46.1821415354   }
+{ name: "Wynberg Girls' High School: GR11DB  ",rankings: [ 30  ,   34  ,   39  ,   40  ,   44  ,   44  ,   44  ], score:   40.8035714286   }
+{ name: "Durban Girls College: Gr 10 Science MP  ",rankings: [ 31  ,   35  ,   41  ,   42  ,   45  ,   45  ,   45  ], score:   36.4615384615   }
+{ name: "Jeppe Girls: Gr 10D Maths AF    ",rankings: [ 32  ,   38  ,   42  ,   43  ,   46  ,   46  ,   46  ], score:   34.236  }
+{ name: "Creston College: Grade 10 PE    ",rankings: [ 38  ,   46  ,   48  ,   52  ,   53  ,   47  ,   47  ], score:   33.75   }
+{ name: "CBC St John's Parklands: Gr 11 BZ   ",rankings: [ 33  ,   39  ,   43  ,   44  ,   47  ,   48  ,   48  ], score:   25.9137931034   }
+{ name: "Jeppe Girls: Gr 11E Maths SC    ",rankings: [ 36  ,   42  ,   45  ,   45  ,   48  ,   49  ,   49  ], score:   25.5    }
+{ name: "Roedean School: Gr 12 Sci LK Class 1203 ",rankings: [ 45  ,   53  ,   54  ,   46  ,   49  ,   50  ,   50  ], score:   17.125  }
+{ name: "Roedean Academy: Gr 12 EH Maths ",rankings: [ 45  ,   53  ,   52  ,   47  ,   50  ,   51  ,   51  ], score:   17.1046617674   }
+{ name: "CBC St John's Parklands: Gr 12 BZ   ",rankings: [ 37  ,   45  ,   47  ,   50  ,   51  ,   52  ,   52  ], score:   9.990625    }
+{ name: "De La Salle: Gr 11 KVW Sci Class X  ",rankings: [ 45  ,   53  ,   54  ,   51  ,   52  ,   53  ,   53  ], score:   9.2285714286    }
+{ name: "Durban Girls College: Gr 10 Science HM  ",rankings: [ 45  ,   51  ,   53  ,   57  ,   59  ,   54  ,   54  ], score:   6.5046556457    }
+{ name: "Jeppe Girls: Gr 10C Maths YS    ",rankings: [ 41  ,   48  ,   49  ,   53  ,   54  ,   55  ,   55  ], score:   5.8333333333    }
+{ name: "De La Salle: Gr 10 KVW Sci Class Z  ",rankings: [ 45  ,   53  ,   54  ,   58  ,   55  ,   56  ,   56  ], score:   5.71875 }
+{ name: "Covenant College: Gr 12 Maths DL    ",rankings: [ 45  ,   49  ,   50  ,   54  ,   56  ,   57  ,   57  ], score:   4.5 }
+{ name: "Reddam House Atlantic Sea Board: Graham11   ",rankings: [ 45  ,   50  ,   51  ,   55  ,   57  ,   58  ,   58  ], score:   4.2352941176    }
+{ name: "De La Salle: Gr 11 KVW Sci Class Z  ",rankings: [ 45  ,   53  ,   54  ,   56  ,   58  ,   59  ,   59  ], score:   3.5571428571    }
+{ name: "Stellenberg High: Grade10M  ",rankings: [ 45  ,   53  ,   54  ,   58  ,   60  ,   60  ,   60  ], score:   0   }
+{ name: "Durban Girls College: Gr 11 Science MP  ",rankings: [ 45  ,   53  ,   54  ,   58  ,   60  ,   60  ,   60  ], score:   0   }
+{ name: "Stellenberg High: Grade12M  ",rankings: [ 45  ,   53  ,   54  ,   58  ,   60  ,   60  ,   60  ], score:   0   }
+{ name: "Durban Girls College: Gr 11 Science HM  ",rankings: [ 45  ,   53  ,   54  ,   58  ,   60  ,   60  ,   60  ], score:   0   }
+{ name: "De La Salle: Gr 12 KVW Sci Class X1 ",rankings: [ 45  ,   53  ,   54  ,   58  ,   60  ,   60  ,   60  ], score:   0   }
+{ name: "Durban Girls College: Gr 12 Science MP  ",rankings: [ 45  ,   53  ,   54  ,   58  ,   60  ,   60  ,   60  ], score:   0   }
+{ name: "Covenant College: Gr 11 Maths DL    ",rankings: [ 45  ,   53  ,   54  ,   58  ,   60  ,   60  ,   60  ], score:   0   }
+{ name: "Covenant College: Gr 12 Science DL  ",rankings: [ 45  ,   53  ,   54  ,   58  ,   60  ,   60  ,   60  ], score:   0   }
+{ name: "Stellenberg High: Grade11M  ",rankings: [ 45  ,   53  ,   54  ,   58  ,   60  ,   60  ,   60  ], score:   0   }
+{ name: "Covenant College: Gr 10 Science DL  ",rankings: [ 45  ,   53  ,   54  ,   58  ,   60  ,   60  ,   60  ], score:   0   }
+{ name: "Roedean School: Gr 12 Sci AB Class 1202 ",rankings: [ 45  ,   53  ,   54  ,   58  ,   60  ,   60  ,   60  ], score:   0   }
+{ name: "Durban Girls College: Gr 12 Science HM  ",rankings: [ 45  ,   53  ,   54  ,   58  ,   60  ,   60  ,   60  ], score:   0   }
+{ name: "Covenant College: Gr 11 Science DL  ",rankings: [ 45  ,   53  ,   54  ,   58  ,   60  ,   60  ,   60  ], score:   0   }
+{ name: "De La Salle: Gr 10 KVW Sci ClassX   ",rankings: [ 45  ,   53  ,   54  ,   58  ,   60  ,   60  ,   60  ], score:   0   }
+{ name: "Wynberg Girls' High School: Wynberg Math Teachers   ",rankings: [ 45  ,   53  ,   54  ,   58  ,   60  ,   60  ,   60  ], score:   0   }
+{ name: "Covenant College: Gr 10 Maths DL    ",rankings: [ 45  ,   53  ,   54  ,   58  ,   60  ,   60  ,   60  ], score:   0   }
+

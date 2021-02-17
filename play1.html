@@ -1,0 +1,272 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>D3 Test</title>
+        <script type="text/javascript" src="d3/d3.v3.js"></script>
+        <style>
+svg .pumpkin {
+    fill: yellow;
+    stroke: orange;
+    stroke-width: 5;
+ }
+
+svg .axis path,
+svg .axis line {
+    fill: none;
+    stroke: #444;
+    shape-rendering: crispEdges;
+}
+
+svg .axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+
+
+div.bar {
+    display: inline-block;
+    width: 20px;
+    height: 75px;   /* We'll override this later */
+    background-color: teal;
+    margin-right:2px;
+}
+</style>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+
+var weekcount = 6; /* add a fake last week */
+var schoolcount = 20;
+
+var w = 800;
+var h = 800;
+var max = 800;
+var padding = 100;
+var colours = ["yellow", "red", "green", "blue", "orange","brown","yellow"];
+
+
+var blue_to_brown = d3.scale.linear()
+  .domain([1, schoolcount])
+  //.range(["steelblue", "brown"])
+  .range(["orange", "blue"])
+  .interpolate(d3.interpolateLab);
+
+
+var svg = d3.select("body")
+            .append("svg")
+            .attr("width", w)
+            .attr("height", h);
+
+var dataset = [
+
+];
+
+
+for (var k=0; k<weekcount; k++)
+{
+    var rankings = d3.shuffle(d3.range(1, schoolcount+1,1));
+    //var rankings = d3.range(1, schoolcount+1,1);
+    for (var j=0; j<schoolcount; j++)
+    {
+        if (k==0) {dataset.push(
+            {   
+            name : "Class " + j ,
+            rankings : [],
+            score: 0
+            }
+        );}
+        if (k==weekcount -1) 
+            {
+                dataset[j].rankings.push(dataset[j].rankings[k-1]);
+                dataset[j].score = 100 - dataset[j].rankings[k-1]*4; 
+            }
+        else{dataset[j].rankings.push(rankings[j]);}
+    }
+}
+
+dataset.sort(function(a, b) {
+                 return d3.ascending(a.rankings[a.rankings.length-1], b.rankings[b.rankings.length-1]);
+                            });
+
+
+var widths = (w)/(dataset.length);
+
+var xScale = d3.scale.ordinal()
+        .domain(d3.range(weekcount))
+        .rangeRoundBands([padding, w-2*padding]);
+
+var yScale = d3.scale.ordinal()
+        .domain(d3.range(dataset.length))
+        .rangeRoundBands([padding, max-2*padding]);
+
+var scoreScale = d3.scale.linear()
+        //.domain([d3.min(scores),d3.max(scores)])
+        .domain([0,100])
+        .range([0,100]);
+
+var parallels = svg.selectAll("parallels")
+        .data(dataset[0].rankings)
+        .enter()
+        .append("line")
+        .attr("x1", function(d,i) {return xScale(i); })
+        .attr("x2", function(d,i) {return xScale(i);})
+        .attr("y1", function(d,i) {return yScale(schoolcount-1);})
+        .attr("y2", function(d,i) {return yScale(0);})
+        .attr("stroke-width",1)
+        .attr("stroke","#111");
+
+var weeklabels = svg.selectAll("weeklabels")
+    .data(dataset[0].rankings)
+    .enter()
+    .append("text")
+    .attr("x", function (d,i) {return xScale(i);} )
+    .attr("y", function(d,i) { return yScale(0)- 20 ;} )
+    .attr("font-size", 14)
+    .attr("text-anchor", "middle")
+    .text(function(d,i){ if (i <dataset[0].rankings.length-1) {return "Week "+ (i+1);}});
+
+
+var paths = svg.selectAll("paths")
+        .data(dataset)
+        .enter()
+        .append("path")
+        .attr("d", function(d,i) 
+            {   
+                var x = xScale(0);
+                var y = yScale(d.rankings[0]-1);
+                var result = "M "+ x + " "+ y +" L ";
+                for (var j = 0; j < d.rankings.length ; j++)
+                {
+                    x = xScale(j);
+                    y = yScale(d.rankings[j]-1);
+                    result = result + x + " " + y  +",";
+                }
+                return result;
+            })
+        .attr("class",function(d,i){ return "SchoolClass" +i; })
+        .attr("id",function(d,i){ return "pathSchoolClass" +i; })
+        .attr("fill","none")
+        .attr("stroke-width",1)
+        .attr("stroke",function(d,i){ return blue_to_brown(d.rankings[d.rankings.length-1]);});
+        
+var labels = svg.selectAll("schools")
+    .data(dataset)
+    .enter()
+    .append("text")
+    .attr("x", function(d,i) { return xScale(d.rankings.length-1) + 15;} )
+    .attr("y", function(d)   { return yScale(d.rankings[d.rankings.length-1]-1)+5;} )
+//    .attr("text-anchor", "left")
+    .attr("font-size", 14)
+    .attr("class",function(d,i){ return "SchoolClass" +i; })
+    .classed("SchoolClass",true)
+    .attr("id",function(d,i){ return "SchoolClass" +i; })
+    //.attr("stroke",function(d,i){ return blue_to_brown(d[d.length-1]);})
+    .text(function(d,i){ return d.name;});
+   
+
+var scorebars = svg.selectAll("schools-scores")
+    .data(dataset)
+    .enter()
+    .append("rect")
+    .attr("x", function(d,i) { return xScale(dataset[0].rankings.length-1) + 135;} )
+    .attr("y", function(d,i) { return yScale(i)-5;} )
+    .attr("height", function(d,i) { return 10;} )
+    .attr("width", function(d,i) { return  scoreScale(d.score);} )
+    .attr("fill",function(d,i){ return blue_to_brown(i);})
+    .attr("class",function(d,i){ return "SchoolClass" +i; })
+    .attr("id",function(d,i){ return "barSchoolClass" +i; })
+    .attr("stroke-width", 1)
+    .attr("stroke",function(d,i){ return "gray";});
+   
+
+
+ 
+var positions = svg.selectAll("positions")
+    .data(dataset)
+    .enter()
+    .append("text")
+    .attr("x", xScale(0) - 20 )
+    .attr("y", function(d,i) { return yScale(i) +7 ;} )
+    .attr("font-size", 14)
+    .attr("text-anchor", "middle")
+    .text(function(d,i){ return i+1;});
+
+var xAxis = d3.svg.axis()
+                  .scale(scoreScale)
+                  .orient("bottom")
+                  .ticks(5);  //Set rough # of ticks
+
+
+
+d3.selectAll(".SchoolClass")
+   .on("mouseover", function() {
+   var id = d3.select(this).attr("id");
+   svg.selectAll("path").attr("opacity",.4);
+   
+   d3.select(this)
+            .attr("font-weight", "bold");
+   
+   d3.selectAll("#path"+id)
+            .attr("stroke",function(d,i){ return blue_to_brown(d.rankings[d.rankings.length-1]);})
+            .attr("stroke-width", 5)
+            .attr("opacity",1);
+
+   d3.selectAll("#bar"+id)
+            .attr("stroke",function(d,i){ return "black";});
+
+   })
+   .on("mouseout", function() {
+        var id = d3.select(this).attr("id");
+        svg.selectAll("path").attr("stroke",function(d,i){ return blue_to_brown(d.rankings[d.rankings.length-1]);})
+        .attr("opacity",1);
+   
+        d3.selectAll("."+id)
+            .attr("font-weight", "normal");
+        d3.selectAll("#path"+id)
+            .attr("stroke-width", 1);
+        d3.selectAll("#bar"+id)
+            .attr("stroke",function(d,i){ return "gray";});
+    }) ;
+
+
+/*
+svg.append("g")
+    .attr("class", "axis")
+    .attr("transform", "translate(" + ((xScale(5) + 135)) + ","+( yScale(schoolcount-1)+7)+")")
+    .call(xAxis);
+*/
+/*
+
+var lines = svg.selectAll("lines")
+        .data(dataset)
+        .enter()
+        .append("line")
+        .attr("x1", function(d,i) {return 50+0*50;})
+        .attr("y1", function(d,i) {return 50+(d[0]-1)*50;})
+        .attr("x2", function(d,i) {return 50+1*50;})
+        .attr("y2", function(d,i) {return 50+(d[1]-1)*50;})
+        .attr("x3", function(d,i) {return 50+2*50;})
+        .attr("y3", function(d,i) {return 50+(d[2]-1)*50;})
+        .attr("x4", function(d,i) {return 50+3*50;})
+        .attr("y4", function(d,i) {return 50+(d[3]-1)*50;})
+        .attr("x5", function(d,i) {return 50+4*50;})
+        .attr("y5", function(d,i) {return 50+(d[4]-1)*50;})
+        .attr("x6", function(d,i) {return 50+5*50;})
+        .attr("y6", function(d,i) {return 50+(d[5]-1)*50;})
+        .attr("x7", function(d,i) {return 50+6*50;})
+        .attr("y7", function(d,i) {return 50+(d[6]-1)*50;})
+        .attr("stroke-width",2)
+        .attr("stroke",function(d,i){ if (i == 0) {return "black";}else{return "red";}});
+ */
+
+
+        </script>
+    </body>
+</html> 
+
+
